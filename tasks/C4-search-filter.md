@@ -1,15 +1,23 @@
-# [C4] Filters/Search Quality Pass
+---
+issue: 4
+title: Filters/Search Quality Pass
+status: todo
+priority: high
+owner: codex
+---
 
-## Goal
+# Goal
 Improve board usability.
 
-## Definition of Done
+# Definition of Done
 - Multi-field search
 - Composable filters
 - Stable sorting
 - Clear empty states
 
-## Acceptance Criteria
+# Acceptance Criteria
 - [ ] Search covers IDs, titles, tags, dependencies
 - [ ] Filters combine correctly
 - [ ] Sorting consistent
+
+# Notes
