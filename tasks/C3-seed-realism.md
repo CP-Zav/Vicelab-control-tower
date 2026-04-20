@@ -1,9 +1,15 @@
-# [C3] Seed/Data Realism Upgrade
+---
+issue: 1
+title: Seed/Data Realism Upgrade
+status: todo
+priority: high
+owner: codex
+---
 
-## Goal
+# Goal
 Provide realistic operational scenarios.
 
-## Definition of Done
+# Definition of Done
 Includes:
 - Happy path
 - Blocked dependency
@@ -11,7 +17,9 @@ Includes:
 - Manual override
 - Archive/restore
 
-## Acceptance Criteria
+# Acceptance Criteria
 - [ ] Each scenario represented
 - [ ] Clean naming
 - [ ] Docs updated
+
+# Notes

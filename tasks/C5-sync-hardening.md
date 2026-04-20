@@ -1,15 +1,23 @@
-# [C5] Supabase Sync Hardening
+---
+issue: 5
+title: Supabase Sync Hardening
+status: todo
+priority: high
+owner: codex
+---
 
-## Goal
+# Goal
 Make persistence reliable.
 
-## Definition of Done
+# Definition of Done
 - Local-first preserved
 - Failures visible
 - Retry logic exists
 - Docs updated
 
-## Acceptance Criteria
+# Acceptance Criteria
 - [ ] Sync failures handled safely
 - [ ] Status visible
 - [ ] No data loss risk
+
+# Notes
