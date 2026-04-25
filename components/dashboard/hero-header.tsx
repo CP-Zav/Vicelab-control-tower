@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Play, CheckCircle, Send, Settings, Activity } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -17,17 +18,27 @@ export function HeroHeader({
   onExecuteOutreach, 
   onOpenSettings 
 }: HeroHeaderProps) {
-  const currentTime = new Date().toLocaleTimeString('en-US', { 
-    hour: '2-digit', 
-    minute: '2-digit',
-    hour12: true 
-  })
-  
-  const currentDate = new Date().toLocaleDateString('en-US', { 
-    weekday: 'long',
-    month: 'short', 
-    day: 'numeric' 
-  })
+  const [currentTime, setCurrentTime] = useState<string>('')
+  const [currentDate, setCurrentDate] = useState<string>('')
+
+  useEffect(() => {
+    const updateTime = () => {
+      setCurrentTime(new Date().toLocaleTimeString('en-US', { 
+        hour: '2-digit', 
+        minute: '2-digit',
+        hour12: true 
+      }))
+      setCurrentDate(new Date().toLocaleDateString('en-US', { 
+        weekday: 'long',
+        month: 'short', 
+        day: 'numeric' 
+      }))
+    }
+    
+    updateTime()
+    const interval = setInterval(updateTime, 1000)
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <motion.section 
